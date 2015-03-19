@@ -1,0 +1,34 @@
+---
+title: "Coursera Data Cleaning Class Project"
+author: "A Gossett"
+date: "March 13, 2015"
+output: html_document
+---
+
+# Project Description
+This project serves as the class project for the Coursera course, "Data Cleaning". The goal of this project is to read in a file from the internet (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip), merge the included training and test data sets, and then create a tidy data table that summarizes the average (mean) of all of the mean and standard deviation measurements.
+
+## Collection of the data
+The data file used for this project is the *Human Activity Recognition Using Smartphones Data Set*. This data contains recordings from 30 subjects performing 6 different activities (Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, and Laying) using a Samsung Galaxy S II. 
+
+## Notes on the original (raw) data
+Details on the pre-processing of the data can be found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. For the purposes of this project, the details of the pre-processing are not relevant.
+
+# Creating the tidy data file
+
+## How to create the tidy file
+1. Download the data file
+2. Extract the needed files
+3. Create a single, unified data set from the training and test data sets that contains only the measurements of interest.
+     + Rename the columns using a valid R column name 
+     + Merge in the activity names to replace the activity codes
+     + Select the columns where the name contains the phrases "mean" or "std"
+7. Use an R package (dplyr) to summarize the mean value for each of the selected columns
+     + Group the data based on the subject and activity type
+     + Generate a summary table that contains the means for each of these groupings
+
+## Output in the tidy file
+The tidy file contains a code representing the subject the measurements pertain to ("subject"; values 1-30), the activity type being summarized (walking, walking upstairs, walking downstairs, sitting, standing, or laying), and the average (mean) value for each of the measurements in the original data file that reprepesented either a mean or standard deviation. For more details see included README.txt file.
+
+# Sources
+The original data is part of the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). All written code is original, but much research was done using the resources at stackoverflow.com provided by the generous participants.
